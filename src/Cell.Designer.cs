@@ -1,5 +1,5 @@
 ﻿
-namespace GMckenziMinesweeper1
+namespace RemakeMineSweeper
 {
     partial class Cell
     {

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GMckenziMinesweeper1
+namespace RemakeMineSweeper
 {
     public partial class Form1 : Form
     {
@@ -206,9 +206,9 @@ namespace GMckenziMinesweeper1
                 try
                 {
                     StreamReader reader = new StreamReader("Save.txt");
-                    wins = int.Parse(reader.ReadLine());
-                    losses = int.Parse(reader.ReadLine());
-                    totalTime = int.Parse(reader.ReadLine());
+                    if (!int.TryParse(reader.ReadLine(), out wins)) wins = 0;
+                    if (!int.TryParse(reader.ReadLine(), out losses)) losses = 0;
+                    if (!int.TryParse(reader.ReadLine(), out totalTime)) totalTime = 0;
                     reader.Close();
                 }
                 catch (IOException) { }

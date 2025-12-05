@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GMckenziMinesweeper1
+namespace RemakeMineSweeper
 {
     public partial class Cell : UserControl
     {
@@ -23,11 +23,16 @@ namespace GMckenziMinesweeper1
         private int bombIndicator = -1;
         private bool flagged = false;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int X { get => x; set => x = value; }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Y { get => y; set => y = value; }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public int BombIndicator { get => bombIndicator; set => bombIndicator = value; }
         public Button MyButton { get => myButton; }
         public int Length { get => mySize; }
-        public int BombIndicator { get => bombIndicator; set => bombIndicator = value; }
 
         public Cell(int x, int y)
         {
@@ -62,7 +67,7 @@ namespace GMckenziMinesweeper1
         public void SetNumber()
         {
             Label number = new Label();
-            number.Font = new Font("Arial", 23, FontStyle.Bold);
+            number.Font = new Font("Arial", 16, FontStyle.Bold);
             number.AutoSize = true;
             number.Text = BombIndicator != 0 ? $"{BombIndicator}":"";
             myPanel.Controls.Add(number);
@@ -72,7 +77,7 @@ namespace GMckenziMinesweeper1
         {
             myButton.Visible = false;
             Label bomb = new Label();
-            bomb.Font = new Font("Arial", 32, FontStyle.Bold);
+            bomb.Font = new Font("Arial", 24, FontStyle.Bold);
             bomb.AutoSize = true;
             bomb.Text = "*";
             myPanel.Controls.Add(bomb);

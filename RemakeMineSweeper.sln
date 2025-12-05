@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMckenziMinesweeper1", "GMckenziMinesweeper1\GMckenziMinesweeper1.csproj", "{417CA153-44E2-4FB7-BEEF-3862A8FE4748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemakeMineSweeper", "RemakeMineSweeper.csproj", "{417CA153-44E2-4FB7-BEEF-3862A8FE4748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
